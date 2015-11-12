@@ -1,0 +1,5 @@
+C:\Documents and Settings\e.gavrilov\мои документы\visual studio 2010\Projects\SimpleWindowsService\SimpleWindowsService\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\e.gavrilov\мои документы\visual studio 2010\Projects\SimpleWindowsService\SimpleWindowsService\bin\Release\SimpleWindowsService.exe
+C:\Documents and Settings\e.gavrilov\мои документы\visual studio 2010\Projects\SimpleWindowsService\SimpleWindowsService\bin\Release\SimpleWindowsService.pdb
+C:\Documents and Settings\e.gavrilov\мои документы\visual studio 2010\Projects\SimpleWindowsService\SimpleWindowsService\obj\x86\Release\SimpleWindowsService.exe
+C:\Documents and Settings\e.gavrilov\мои документы\visual studio 2010\Projects\SimpleWindowsService\SimpleWindowsService\obj\x86\Release\SimpleWindowsService.pdb
