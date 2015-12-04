@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=simplemosquittopp
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/simplemosquittopp
+CND_ARTIFACT_NAME_Debug=mosquitto
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/mosquitto
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=simplemosquittopp.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/simplemosquittopp.tar
+CND_PACKAGE_NAME_Debug=mosquitto.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/mosquitto.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=simplemosquittopp
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/simplemosquittopp
+CND_ARTIFACT_NAME_Release=mosquitto
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/mosquitto
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=simplemosquittopp.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/simplemosquittopp.tar
+CND_PACKAGE_NAME_Release=mosquitto.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/mosquitto.tar
 #
 # include compiler specific variables
 #
