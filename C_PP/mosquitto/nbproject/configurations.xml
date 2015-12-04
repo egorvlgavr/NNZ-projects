@@ -38,6 +38,7 @@
         </cTool>
         <ccTool>
           <developmentMode>0</developmentMode>
+          <standard>8</standard>
           <incDir>
             <pElem>/usr/local/include</pElem>
           </incDir>

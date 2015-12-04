@@ -11,31 +11,25 @@
 
 #include "MqttWrapper.h"
 
-int main(int argc, char *argv[])
-{
-	MqttWrapper *simpleClient;
-	int rc;
+int main(int argc, char *argv[]) {
+    MqttWrapper *mqtt_client;
+    int rc;
+    const std::string client_name("simpleClient");
+    const std::string host("localhost");
+    const int port = 1883;
+    std::string topic_to_subscribe("test/listening");
+    std::string topic_to_publish("test/saying");
 
-	mosqpp::lib_init();
-        
-        const std::string mqttClientName("simpleClient"); 
-        const std::string host("localhost");
-        const int port = 1883;
-        std::string topicToSubscribe("test/listening");
-        std::string topicToPublish("test/saying");
-        
-	simpleClient = new MqttWrapper(mqttClientName.c_str(), host.c_str(), port);
-        simpleClient->subscribeToTopic(topicToSubscribe);
-        simpleClient->publishMessage(topicToPublish, "SimplePublication");
-        
-	while(1){
-		rc = simpleClient->loop();
-		if(rc){
-                    simpleClient->reconnect();
-		}
-	}
+    mqtt_client = new MqttWrapper(client_name.c_str(), host.c_str(), port);
+    mqtt_client->subscribeToTopic(topic_to_subscribe);
+    mqtt_client->publishMessage(topic_to_publish, "SimplePublication");
 
-	mosqpp::lib_cleanup();
-        delete simpleClient;
-	return 0;
+    while (true) {
+        rc = mqtt_client->loop();
+        if (rc) {
+            mqtt_client->reconnect();
+        }
+    }
+    delete mqtt_client;
+    return 0;
 }
