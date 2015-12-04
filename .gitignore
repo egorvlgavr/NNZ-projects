@@ -8,3 +8,5 @@
 *.so
 build/*
 dist/*
+bin/*
+obj/*
