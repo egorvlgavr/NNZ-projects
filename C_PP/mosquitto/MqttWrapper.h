@@ -26,6 +26,9 @@ public:
 private:
     const int keepalive_ = 100;
     const int qos_ = 0;
+    static constexpr const char* STATUS_TOPIC_ = "test/status";
+    static constexpr const char* ONLINE_MESSAGE_ = "SystemOnline";
+    static constexpr const char* OFFLINE_MESSAGE_ = "SystemOffline";
     
 };
 

@@ -14,12 +14,17 @@
 MqttWrapper::MqttWrapper(const std::string& id, const std::string& host,
         int port) : mosquittopp(id.c_str()) {
     mosqpp::lib_init();
-    /* Connect immediately. This could also be done by calling
-     * mqtt_tempconv->connect(). */
+    // Set last will message it will be send if client be emergency disconnected 
+    will_set(STATUS_TOPIC_, std::char_traits<char>::length(OFFLINE_MESSAGE_),
+            OFFLINE_MESSAGE_, 0, true);
     connect(host.c_str(), port, keepalive_);
+    publish(NULL, STATUS_TOPIC_, std::char_traits<char>::length(ONLINE_MESSAGE_),
+            ONLINE_MESSAGE_, 0, true);
 };
 
-MqttWrapper::~MqttWrapper() {   
+MqttWrapper::~MqttWrapper() {
+    publish(NULL, STATUS_TOPIC_, std::char_traits<char>::length(OFFLINE_MESSAGE_),
+                OFFLINE_MESSAGE_, 0, true);
     mosqpp::lib_cleanup();
 }
 
@@ -28,7 +33,6 @@ void MqttWrapper::on_connect(int rc) {
 }
 
 void MqttWrapper::on_message(const struct mosquitto_message *message) {
-
     std::string mqttTopic(message->topic);
     std::string messageData(static_cast<char*> (message->payload));
     std::cout << "Get message from topic: " + mqttTopic << std::endl;
