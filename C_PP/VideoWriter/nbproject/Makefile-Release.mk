@@ -36,7 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/FilesystemOperations.o \
-	${OBJECTDIR}/ImageSever.o \
+	${OBJECTDIR}/ImageSaver.o \
 	${OBJECTDIR}/VideoSaver.o \
 	${OBJECTDIR}/main.o
 
@@ -70,20 +70,20 @@ ${OBJECTDIR}/FilesystemOperations.o: FilesystemOperations.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FilesystemOperations.o FilesystemOperations.cpp
 
-${OBJECTDIR}/ImageSever.o: ImageSever.cpp 
+${OBJECTDIR}/ImageSaver.o: ImageSaver.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ImageSever.o ImageSever.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ImageSaver.o ImageSaver.cpp
 
 ${OBJECTDIR}/VideoSaver.o: VideoSaver.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VideoSaver.o VideoSaver.cpp
 
-${OBJECTDIR}/main.o: main.cc 
+${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

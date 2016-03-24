@@ -5,13 +5,18 @@
 #include <iostream>
 #include <stdbool.h>
 #include "VideoSaver.h"
-#include "ImageSever.h"
+#include "ImageSaver.h"
 
-int main(int ac, char** av) {
+int main(int argc, char** argv) {
+    // comand line argument check
+    if (argc != 2) {
+        std::cout << "Incorrect number of arguments." << std::endl;
+        std::cout << "First argument must be video file or URL" << std::endl;
+        return -1;
+    }
+    const std::string video_source = argv[1];           // the source file name
 
-    const std::string url = "rtsp://vide_stream_url:554";
-    const std::string video_file = "sample_video.wmv";
-    cv::VideoCapture capture(url); //try to open string, this will attempt to open it as a video file or image sequence
+    cv::VideoCapture capture(video_source); //try to open string, this will attempt to open it as a video file or image sequence
 
     if (!capture.isOpened()) {
         std::cerr << "Failed to open the video device, video file or image sequence!\n" << std::endl;

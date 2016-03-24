@@ -20,7 +20,7 @@ public:
     void changeSaveState();
     void saveFrame(cv::Mat& new_frame);
 private:
-    int n_ = 0;
+    int video_counter_ = 0;
     char video_filename_[50];
     bool is_video_writing_ = false;
     cv::VideoWriter output_video_;

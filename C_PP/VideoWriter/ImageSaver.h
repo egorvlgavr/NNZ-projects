@@ -5,8 +5,8 @@
  * Created on 25 November 2015, 16:04
  */
 
-#ifndef IMAGESEVER_H
-#define	IMAGESEVER_H
+#ifndef IMAGESAVER_H
+#define	IMAGESAVER_H
 
 #include <opencv2/highgui/highgui.hpp>
 
@@ -17,10 +17,10 @@ public:
     virtual ~ImageSever();
     void saveImage(cv::Mat& new_image);
 private:
-    int k_ = 0;
+    int image_counter_ = 0;
     char image_filename_[50];
     const char* IMAGE_FOLDER_ = "image_samples";
 };
 
-#endif	/* IMAGESEVER_H */
+#endif	/* IMAGESAVER_H */
 

@@ -12,3 +12,5 @@ bin/*
 obj/*
 /C_PP/mosquitto/build/
 /C_PP/mosquitto/dist/
+/C_PP/VideoWriter/build/
+/C_PP/VideoWriter/dist/

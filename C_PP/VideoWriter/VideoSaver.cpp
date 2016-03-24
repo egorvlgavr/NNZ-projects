@@ -35,7 +35,7 @@ void VideoSaver::saveFrame(cv::Mat& new_frame) {
 void VideoSaver::changeSaveState() {
     if (!is_video_writing_) {
         filesystem_operations::createFolderIfNotExist(VIDEO_FOLDER_);
-        sprintf(video_filename_, "video%.3d.avi", n_++);
+        sprintf(video_filename_, "video%.3d.avi", video_counter_++);
         std::cout << "Started " << video_filename_ << std::endl;
         output_video_.open(std::string(VIDEO_FOLDER_).append("/") + video_filename_,
                 cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), fps_, frame_size_, true);

@@ -26,8 +26,9 @@
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" "arg 1" "arg 2" "arg 3" "arg 4"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /home/egor/work/computer_vision/samples/video_samples_day/video000.avi</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" "arg 1" "arg 2" "arg 3" "arg 4"</runcommand>
+        <runcommand>"${OUTPUT_PATH}" /home/egor/work/computer_vision/samples/video_samples_day/video000.avi</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
