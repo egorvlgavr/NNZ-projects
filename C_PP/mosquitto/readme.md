@@ -14,13 +14,13 @@ Tested on Linux Mint 17.1 'Rebecca' Mate 64bit
 IDE: NetBeans IDE 8.0.2 (Build 201411181905)
 
 
-###Installation
+### Installation
 
 Version of mosquitto and libries from Linux Mint repository isn't used because they are out of date.
 So I advise to follow steps from: <http://goochgooch.co.uk/2014/08/01/building-mosquitto-1-4/>  
 Latest version can be cloned from: <https://git.eclipse.org/r/mosquitto/org.eclipse.mosquitto>
 
-###Using
+### Using
 
 Start Mosquitto  
 ```
